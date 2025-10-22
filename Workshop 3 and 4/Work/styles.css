@@ -45,11 +45,12 @@ nav {
     margin-top: 50px;
     line-height: 30px;
     position: fixed;
+    background-color: #000;
 }
 
 nav a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
 }
 
@@ -62,16 +63,21 @@ section {
     text-align: justify;
 }
 
-article p:last-child{
+article p:last-child {
     margin-bottom: 80px;
 }
 
 footer {
-    text-align: right;
+    background-color: #000;
+    color: white;
+    text-align: center;
     font-weight: lighter;
     font-size: 10px;
     margin-top: 20px;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-right: 0px;
+    bottom: 0;
+    width: 100%;
 }
 
 footer a {
@@ -97,7 +103,7 @@ footer a:hover {
     height: auto;
 }
 
-.books > div {
+.books>div {
     text-align: center;
     padding: 10px;
 }
@@ -116,4 +122,56 @@ article figure figcaption {
 table img {
     max-width: 100%;
     max-height: 10;
+}
+
+/* This applies for phones */
+
+@media (max-width: 480px) {
+    nav {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 0;
+        line-height: 30px;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        border-bottom: 4px solid black;
+        background: #000;
+        z-index: 1000;
+        color: white;
+    }
+
+    nav a {
+        color: white;
+    }
+
+    h1 {
+        margin-top: 20px;
+    }
+
+
+    #wrapper {
+        margin-top: 50px;
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        float: none;
+    }
+
+    #wrapper img {
+        margin-top: 0px;
+    }
+
+    footer{
+        margin-top: 40px;
+        font-size: 12px;
+    }
+
+    .books {
+        grid-template-columns: auto auto;
+    }
 }
