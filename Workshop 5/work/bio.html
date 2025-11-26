@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humans of New York</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100..900&display=swap" rel="stylesheet">
+
+     <!-- Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    
+    <div id="wrapper">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="#">
+                        <img src="assets/logo.png" alt="Humans of New York Logo" width="110px" height="50px">
+                    </a>
+                </div>
+            
+                <div class="menu1">
+                    <button class="close-menu">&times;</button>
+                    <a class="menuI" href="index.html">INDEX</a>
+                    <a class="menuI" href="work.html">STORIES</a>
+                    <a class="menuI" href="#">ABOUT</a>
+                </div>
+
+                <div class="hamburger-menu">
+                    <button>
+                        <span class="fa fa-bars"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        
+
+        <footer>
+            <div class="social">
+                <div class="icons-wrapper">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-pinterest"></a>
+                    <a href="#" class="fa fa-snapchat-ghost"></a>
+
+                </div>
+            </div>
+        </footer>
+
+        <small>
+            <em>
+                This website was created as part of a student project. All content and designs are copyright me, Ahmad AlRazzaz, 2025.
+            </em>
+        </small>
+    </div>
+
+            <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerButton = document.querySelector('.hamburger-menu button');
+            const closeButton = document.querySelector('.close-menu');
+            const menu1 = document.querySelector('.menu1');
+
+            // Gestion de l'ouverture du menu
+            hamburgerButton.addEventListener('click', () => {
+                menu1.classList.add('menu-deployed');
+            });
+
+            // Gestion de la fermeture du menu
+            closeButton.addEventListener('click', () => {
+                menu1.classList.remove('menu-deployed');
+            });
+        });
+    </script>
